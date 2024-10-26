@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kabupaten Magelang</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://logobagus.com/wp-content/uploads/2024/02/Logo_Kabupaten_Magelang-226x300.png" 
+                     alt="Logo Kabupaten Magelang">
+                <div class="logo-text">WEBSITE RESMI KABUPATEN MAGELANG</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="utama.html">Beranda</a></li>
+                    <li><a href="profil.html" class="active">Profil</a></li>
+                    <li><a href="sistem-informasi.html">Sistem Informasi</a></li>
+                    <li><a href="#footer"> Kontak </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="profil">
+    <div class="container">
+        <h1 class="main-title">PROFIL KABUPATEN MAGELANG</h1>
+        
+        <div class="content-box">
+            <h2 class="section-title">PENJELASAN UMUM</h2>
+            <div class="content-text">
+                <p>Kabupaten Magelang merupakan salah satu kabupaten yang berada di wilayah administratif Provinsi Jawa Tengah, Indonesia. Secara administratif, kabupaten ini berbatasan langsung dengan Kabupaten Temanggung dan Kabupaten Semarang di sebelah Utara, Kabupaten Semarang dan Kabupaten Boyolali di sebelah Timur, Kabupaten Purworejo dan Daerah Istimewa Yogyakarta di sebelah Selatan, serta Kabupaten Wonosobo dan Kabupaten Temanggung di sebelah Barat. Kabupaten Magelang terdiri dari 21 kecamatan dengan luas wilayah mencapai 1.085,73 km².</p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2 class="section-title">SEJARAH</h2>
+            <div class="content-text">
+                <p>Kabupaten Magelang memiliki sejarah panjang yang erat kaitannya dengan perkembangan peradaban di Pulau Jawa. Pada masa Kerajaan Mataram Kuno, wilayah ini menjadi salah satu pusat pemerintahan dan kebudayaan yang signifikan. Hal ini dibuktikan dengan keberadaan Candi Borobudur yang dibangun pada abad ke-8 Masehi. Pada masa kolonial Belanda, Magelang berkembang menjadi pusat pemerintahan dan militer yang strategis.</p>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2 class="section-title">GEOGRAFI</h2>
+            <div class="content-text">
+                <p>Secara geografis, Kabupaten Magelang terletak pada posisi 110°01'51" - 110°26'58" Bujur Timur dan 7°19'13" - 7°42'16" Lintang Selatan. Wilayah ini memiliki topografi yang bervariasi, dengan ketinggian antara 202 - 1.378 meter di atas permukaan laut (mdpl).</p>
+                <div class="mountain-list">
+                    <h3>Gunung-gunung yang mengelilingi:</h3>
+                    <ul>
+                        <li>Gunung Merapi (2.911 m)</li>
+                        <li>Gunung Merbabu (3.142 m)</li>
+                        <li>Gunung Sumbing (3.371 m)</li>
+                        <li>Gunung Sindoro (3.136 m)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-box">
+            <h2 class="section-title">BUDAYA</h2>
+            <div class="content-text">
+                <div class="culture-grid">
+                    <div class="culture-item">
+                        <h3>Kesenian Tradisional</h3>
+                        <ul>
+                            <li>Topeng Ireng</li>
+                            <li>Jathilan</li>
+                            <li>Kuda Lumping</li>
+                            <li>Dayakan</li>
+                        </ul>
+                    </div>
+                    <div class="culture-item">
+                        <h3>Upacara Adat</h3>
+                        <ul>
+                            <li>Tradisi Nyadran</li>
+                            <li>Ritual Saparan</li>
+                            <li>Merti Desa</li>
+                            <li>Sedekah Bumi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+<footer id="footer" class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Tentang Kabupaten Magelang</h3>
+            <p>Kabupaten Magelang adalah salah satu kabupaten di Provinsi Jawa Tengah. Kabupaten ini berbatasan dengan Kabupaten Temanggung dan Kabupaten Semarang di Utara.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Kontak</h3>
+            <p>Alamat: Jl. Soekarno-Hatta No. 59, Kota Mungkid, Magelang</p>
+            <p>Email: info@magelangkab.go.id</p>
+            <p>Telepon: (0293) 788181</p>
+        </div>
+        <div class="footer-section">
+            <h3>Lokasi Kami</h3>
+            <div id="footer-map"></div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Pemerintah Kabupaten Magelang. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    var footerMap = L.map('footer-map').setView([-7.4797, 110.2177], 11);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(footerMap);
+    L.marker([-7.4797, 110.2177]).addTo(footerMap)
+        .bindPopup('Kabupaten Magelang')
+        .openPopup();
+</script>
+</html>
